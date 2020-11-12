@@ -1,0 +1,224 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif; 
+    background: rgb(255, 255, 255);
+}
+.page-content{
+    width: 100%;
+    max-height: 84%;
+    display: inline-block;
+}
+
+/*    <~~~ HEADER NAVIGATION start ~~~~   */
+.navBar{
+    width: 100%;
+    display: inline-block;
+    min-height: 55px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(133, 129, 129); 
+    justify-content: center;
+}
+.navBar-left{
+    display: inline-block;
+    width: 28%;
+}
+#header-logo{
+    display: inline-block;
+    margin: 0 1em;
+    cursor: pointer;
+    display: none;
+}
+#header-logo-mobile{
+    width: 50px;
+    height: auto;
+}
+.navBar-center{
+    width: 40%;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin: 0.5em 0;
+    text-align: center;
+}
+#navBar-pageTitle {
+    margin: 0 auto;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.navBar-right{
+    display: block;
+    float: right;
+    width: 28%;
+    height: auto;
+}
+#navButton-toggle{
+    height: 33px;
+    width: 33px;
+    position: relative;
+    display: block;
+    margin: 0.5em 0.5em;
+    float: right;
+    padding: 3px 6px;
+    background: transparent;
+    border: 3px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.navButton-Line{
+    background:#555;
+    display: block;
+    width: 15px;
+    height: 3px;
+    border-radius: 1px;
+    margin: 3px 0;
+}
+.navBar-show{
+    display: inline-block;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: openNavBar;
+}
+@keyframes openNavBar{
+    0%  {opacity: 0%; }
+  100%  {opacity: 100%; }
+}
+nav{
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+}
+nav > ul{
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    overflow: auto;
+    text-align: center;
+}
+nav > ul > li{
+    display: inline-block;
+}
+nav > ul > li > a{
+    display: inline-block;
+    padding: 0.5em;
+    text-align: center;
+    color:  rgb(12, 54, 168);
+}
+nav > ul > li > a:hover{
+    cursor: pointer;
+    background: rgb(12, 54, 168);
+    color: #fff
+}
+.activePage{
+    cursor: pointer;
+    background: rgb(12, 54, 168);
+    color: #fff
+}
+
+main{
+    min-height: 100%;
+    width: 100%;
+    background-image: url('./images/prelbakgrund.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#Startsida{
+    width: 100%;
+    margin-top: 10em;
+    opacity: 0; 
+}
+#Startsida > h2{
+    margin: 0 auto;
+    height: auto;
+    font-size: 3.3em;
+    letter-spacing: 0.1em;
+    color: white;
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;   
+} 
+.welcome-buttons{
+    margin-top: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.welcome-buttons > a{
+    width: 10em;
+    padding: 0.5em 0;
+    margin: 0.2em;
+    border: 0.16em solid #FFFFFF;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:600;
+    color: #FFFFFF;
+    border-color: rgb(255, 255, 255);
+    transition: all 0.15s;
+    background: rgba(255, 255, 255, 0.257);
+}
+.welcome-buttons > a:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+    background:#dddddd25;
+    cursor: pointer;
+}
+.welcome-buttons > a:active{
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+    background: rgba(187, 187, 187, 0.384);
+}
+/*    <~~~~ DESKTOP layout start ~~~   */
+@media screen and (min-width: 768px) { 
+
+    /*    <~~~~ HEADER NAVIGATION desktop start~~~    */    
+    nav{
+        visibility: visible;
+        display: inline-block;
+        margin: 0 auto;
+        width: 60%;
+    }
+    .navDesktop{
+        visibility: visible;
+        display: inline-block;
+        margin: 0 auto;
+        width: 60%;
+    }
+    .navBar-left{
+        width: 20%;
+    }
+    #header-logo{
+        width: 150px;
+        display: block;
+    }
+    #header-logo-mobile{
+        display: none;
+    }
+    .navBar-center{
+        display: none;
+        visibility: hidden;
+    }
+    .navBar-right{
+        display: none;
+        visibility: hidden;
+        width: 20%;
+    }
+    nav > ul{
+        width: auto;
+    }
+    nav > ul > li > a{
+        padding: 1em 1.5em;
+    }
+    /*    ~~~~ NAVIGATION desktop end ~~~>   */
+
+
+}
