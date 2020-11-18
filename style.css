@@ -17,13 +17,14 @@ html, body{
     width: 100%;
     display: inline-block;
     min-height: 55px;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgb(133, 129, 129); 
+    background: rgba(255, 255, 255, 0);
+    /* box-shadow: 0 0 10px rgb(13, 0, 134);  */
     justify-content: center;
 }
 .navBar-left{
     display: inline-block;
-    width: 28%;
+    /* width: 28%; */
+    width: 42%;
 }
 #header-logo{
     display: inline-block;
@@ -50,7 +51,7 @@ html, body{
 .navBar-right{
     display: block;
     float: right;
-    width: 28%;
+    width: 18%;
     height: auto;
 }
 #navButton-toggle{
@@ -113,12 +114,14 @@ nav > ul > li > a{
 }
 nav > ul > li > a:hover{
     cursor: pointer;
-    background: rgb(12, 54, 168);
+    /* background: rgb(12, 54, 168); */
+    background-image: linear-gradient(0deg, #ffffff00, #02129c);;
     color: #fff
 }
 .activePage{
     cursor: pointer;
-    background: rgb(12, 54, 168);
+    /* background: rgba(12, 54, 168, 0.603); */
+    background-image: linear-gradient(0deg, #ffffff00, #02119c98);
     color: #fff
 }
 
@@ -128,25 +131,34 @@ main{
     background-image: url('./images/prelbakgrund.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    /* background-position: center center; */
+    background-position: 0em -3em;
 }
 #Startsida{
     width: 100%;
-    margin-top: 10em;
+    margin-top: 6.3em;
     opacity: 0; 
 }
 #Startsida > h2{
-    margin: 0 auto;
+    width: 35%;
+    margin: 0 auto auto 53%;
     height: auto;
     font-size: 3.3em;
     letter-spacing: 0.1em;
-    color: white;
+    color: rgb(0, 0, 0);
+    /* background-image: linear-gradient(45deg, #ffffff, #bbbfe2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent; */
+    /* background-clip: unset; */
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
     text-transform: uppercase;
     display: grid;
     place-items: center;   
 } 
 .welcome-buttons{
-    margin-top: 20%;
+    margin-top: 18%;
     width: 100%;
     display: flex;
     justify-content: center;
