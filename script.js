@@ -104,17 +104,17 @@ $(document).ready(function() {
     /*    <~~~ Hem start ~~~~   */
 
         //tjänster-knappen klick
-        $('#startProjects').click(function (event) {
+        $('#tjänstknapp').click(function (event) {
             event.preventDefault();
-            loadPage('Portfolio');
+            loadPage('Tjänster');
         });
 
         //kontaktknapp klick
-        $('#startUs').click(function (event) {
+        $('#kontaktknapp').click(function (event) {
             event.preventDefault();
-            loadPage('About');
+            loadPage('Kontakt');
 
-            laddar in utvecklarna
+            //ladda json
             $.getJSON(
                 'res/about-data.json',
                 function (data) {
