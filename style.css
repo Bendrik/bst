@@ -1,9 +1,17 @@
+* {
+    --marin_blue: rgb(12, 54, 168);
+    --marin_hover: #02119c98;
+    --marin_bg: rgba(12, 54, 168, 0.123);
+    --marin_bg_hover: #02119c57;
+}
+
 html, body{
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: sans-serif; 
+    /* font-family: sans-serif;  */
+    font-family: Arial, Helvetica, sans-serif;
     background: rgb(255, 255, 255);
 }
 .page-content{
@@ -28,7 +36,7 @@ html, body{
 }
 #header-logo{
     display: inline-block;
-    margin: 0 1em;
+    margin: 0.1em 1em;
     cursor: pointer;
     display: none;
 }
@@ -86,10 +94,10 @@ html, body{
     animation-play-state: running;
     animation-name: openNavBar;
 }
-@keyframes openNavBar{
+/* @keyframes openNavBar{
     0%  {opacity: 0%; }
   100%  {opacity: 100%; }
-}
+} */
 nav{
     display: none;
     margin: 0 auto;
@@ -115,13 +123,16 @@ nav > ul > li > a{
 nav > ul > li > a:hover{
     cursor: pointer;
     /* background: rgb(12, 54, 168); */
-    background-image: linear-gradient(0deg, #ffffff00, #02129c);;
+    background-color: var(--marin_hover);
+    /* background-image: linear-gradient(0deg, #ffffff00, #02129c);; */
     color: #fff
 }
 .activePage{
     cursor: pointer;
     /* background: rgba(12, 54, 168, 0.603); */
-    background-image: linear-gradient(0deg, #ffffff00, #02119c98);
+
+    background-color: var(--marin_hover);
+    /* background-image: linear-gradient(0deg, #ffffff00, #02119c98); */
     color: #fff
 }
 
@@ -134,12 +145,12 @@ main{
     /* background-position: center center; */
     background-position: 0em -3em;
 }
-#Startsida{
+#Hem-Page{
     width: 100%;
-    margin-top: 6.7em;
+    margin-top: 6.2em;
     opacity: 0; 
 }
-#Startsida > h2{
+#Hem-Page > h2{
     width: 35%;
     margin: 0 auto auto 53%;
     height: auto;
@@ -152,42 +163,51 @@ main{
     -moz-background-clip: text;
     -moz-text-fill-color: transparent; */
     /* background-clip: unset; */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.979);
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.979); */
     text-transform: uppercase;
     display: grid;
     place-items: center;   
 } 
-.welcome-buttons{
+.hem-lower{
+    width: 100%;
+    height: 34%;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+.hem-knappar{
     margin-top: 18%;
     width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
 }
-.welcome-buttons > a{
+.hem-knappar > a{
     width: 10em;
     padding: 0.5em 0;
     margin: 0.2em;
-    border: 0.16em solid #FFFFFF;
+    border: 0.16em solid var(--marin_blue);
     box-sizing: border-box;
     text-decoration:none;
     text-transform:uppercase;
     font-weight:600;
-    color: #FFFFFF;
-    border-color: rgb(255, 255, 255);
+    color: var(--marin_blue);
+    /* border-color: rgb(255, 255, 255); */
     transition: all 0.15s;
-    background: rgba(255, 255, 255, 0.257);
+    background: var(--marin_bg);
 }
-.welcome-buttons > a:hover{
-    color:#DDDDDD;
-    border-color:#DDDDDD;
-    background:#dddddd25;
+.hem-knappar > a:hover{
+    color: var(--marin_hover);
+    border-color: var(--marin_hover);
+    background: var(--marin_bg_hover);
     cursor: pointer;
 }
-.welcome-buttons > a:active{
-    color:#BBBBBB;
-    border-color:#BBBBBB;
-    background: rgba(187, 187, 187, 0.384);
+.hem-knappar > a:active{
+    color:var(--marin_hover);
+    border-color:var(--marin_hover);
+    background: var(--marin_bg_hover);
 }
 /*    <~~~~ DESKTOP layout start ~~~   */
 @media screen and (min-width: 768px) { 

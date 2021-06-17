@@ -1,16 +1,17 @@
-$(document).ready(function() { //JavaScriptet nedan körs när HTML-sidan har laddat klart. 
+$(document).ready(function() {
 
-    //funktion som döljer alla sidor
+    //dölj alla sidor-funktion
     function hidePageSections() { 
-        $("#Startsida").hide();
-        /* $("#Portfolio-Page").hide();
-        $("#About-Page").hide();
-        $("#Contact-Page").hide(); */
+        $("#Hem-Page").hide();
+        $("#Tjänster-Page").hide();
+        $("#Om-Page").hide();
+        $("#Kontakt-Page").hide();
     }
 
-    hidePageSections(); //vid första laddning av webbsidan, döljs alla sidor med funktionen ovan
-    $("#Startsida").show(); //visar startsida vid första laddning
-    $("#Startsida").animate({opacity: '1'}, 1500); //animera fram "Welcome" vid första laddning
+    //döljer sidor och visar startsidan
+    hidePageSections();
+    $("#Hem-Page").show(); 
+    $("#Hem-Page").animate({opacity: '1'}, 1000); 
 
     
     /*    <~~~ Navigering start ~~~~   */
@@ -27,101 +28,102 @@ $(document).ready(function() { //JavaScriptet nedan körs när HTML-sidan har la
             classToggle();
         }
 
-        //funktion som anropas när man klickar på Hem
+        //klick på Hem
         $('#Hem').click(function (event) {
             event.preventDefault();
             loadPage('Hem');
-            $("#Startsida").css({"opacity": "0"});
-            $("#Startsida").animate({opacity: '1'}, 1500);
+            // $("#Hem").css({"opacity": "0"});
+            // $("#Hem").animate({opacity: '1'}, 1500);
         });
 
         //funktion som används när vi klickar på loggan i mobile eller desktop läge. 
         function loadLogoHemPage() {
             hidePageSections(); 
-            $('#Startsida').show();
+            $('#Hem-Page').show();
             $('.menuBtn').removeClass('activePage');
             $('#Hem').addClass('activePage');
 
             $('#navBar-pageTitle').html('Hem');
             $('nav').removeClass('navBar-show');
-            $("#Startsida").css({"opacity": "0"});
-            $("#Startsida").animate({opacity: '1'}, 1500);
+            // $("#Hem").css({"opacity": "0"});
+            // $("#Hem").animate({opacity: '1'}, 1500);
         }
 
-        //funktion som anropas när man klickar på loggan, dock mera hårdkodad.
+        //klick på logga
         $('#header-logo').click(function (event) {
             event.preventDefault();
             loadLogoHemPage();
         });
 
-        //funktion som anropas när man klickar på loggan, dock mera hårdkodad.
+        //klick på logga mobilversion
         $('#header-logo-mobile').click(function (event) {
             event.preventDefault();
             loadLogoHemPage();
         });
 
-        //funktion som anropas när man klickar på Portfolio
-        $('#Portfolio').click(function (event) {
+        //klick på tjänster
+        $('#Tjänster').click(function (event) {
             event.preventDefault();
-            loadPage('Portfolio');
+            loadPage('Tjänster');
         });
 
-        //funktion som anropas när man klickar på About us
-        $('#About').click(function (event) {
+        //klick på om
+        $('#Om').click(function (event) {
             event.preventDefault();
-            loadPage('About');
+            loadPage('Om');
 
-            //laddar in utvecklarna
-            $.getJSON(
-                'res/about-data.json',
-                function (data) {
-                    displayAbout(data.person);
-                }
-            );
+            //laddar in från jsonfil
+            // $.getJSON(
+            //     'res/about-data.json',
+            //     function (data) {
+            //         displayAbout(data.person);
+            //     }
+            // );
         });
 
         //funktion som anropas när man klickar på Contact
-        $('#Contact').click(function (event) {
+        $('#Kontakt').click(function (event) {
             event.preventDefault();
-            loadPage('Contact');
+            loadPage('Kontakt');
+            //tömma formulär
             $('#contactSubmitMessage').text("");
         });
 
-        //funktion som lägger till respektive tar bort navBar-show, dvs. döljer eller visar navigerings-menyn
+        //lägger till/tar bort navBar-show, dvs. döljer eller visar navigerings-menyn
         function classToggle() {
             const navs = document.querySelectorAll('nav');
             navs.forEach(nav => nav.classList.toggle('navBar-show'));
         }
         
-        //När man klickar på hamburgermenu-knappen i mobil-vy, så anropas funktionen ovanför som visar/döljer navigeringen
+        //klickar på hamburgermenu-knappen i mobil-vy, så anropas funktionen ovanför som visar/döljer navigeringen
         document.querySelector('#navButton-toggle').addEventListener('click', classToggle);
 
     /*    ~~~~ Navigering end ~~~>   */
 
 
-    /*    <~~~ Startsida start ~~~~   */
+    /*    <~~~ Hem start ~~~~   */
 
-        //funktion som visar Portfolio när man klickat på knappen på Startsidan
-        /* $('#startProjects').click(function (event) {
+        //tjänster-knappen klick
+        $('#startProjects').click(function (event) {
             event.preventDefault();
             loadPage('Portfolio');
         });
 
-        //funktion som visar About us när man klickat på knappen på Startsidan
+        //kontaktknapp klick
         $('#startUs').click(function (event) {
             event.preventDefault();
             loadPage('About');
 
-            //laddar in utvecklarna
+            laddar in utvecklarna
             $.getJSON(
                 'res/about-data.json',
                 function (data) {
                     displayAbout(data.person);
                 }
             );
-        }); */
+        });
         
-    /*    ~~~~ Startsida end ~~~>   */
+    /*    ~~~~ Hem end ~~~>   */
 
     
 });
