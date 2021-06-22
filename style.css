@@ -14,10 +14,37 @@ html, body{
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(255, 255, 255);
 }
-.page-content{
+
+main{
+    height: 100%;
     width: 100%;
-    max-height: 84%;
+    /* background-image: url('./images/prelbakgrund.jpg'); */
+    background-image: url('./images/hav.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center center; */
+    background-position: 0em -3em;
+    background-attachment: fixed;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+/* .page-content{
+    width: 100%;
+    /* max-height: 84%; */
+    /*height: 70vh;
     display: inline-block;
+} */
+
+#content{
+    height: 100%;
+    width: 100%;
+    margin: 0%, 10%;
+    background-color: rgba(255, 255, 255, 0.685);
+    /* background: radial-gradient(circle at center, rgba(255, 255, 255, 0.493) 0, rgba(255, 255, 255, 0.808), rgba(255, 255, 255, 0.911) 100%); */
+    /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.664); */
+    /* display: block; */
+
 }
 
 /*    <~~~ HEADER NAVIGATION start ~~~~   */
@@ -25,8 +52,8 @@ html, body{
     width: 100%;
     display: inline-block;
     min-height: 55px;
-    background: rgba(255, 255, 255, 0);
-    /* box-shadow: 0 0 10px rgb(13, 0, 134);  */
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 3px 5px -5px rgb(17, 17, 17); 
     justify-content: center;
 }
 .navBar-left{
@@ -99,8 +126,8 @@ html, body{
   100%  {opacity: 100%; }
 } */
 nav{
-    display: none;
-    margin: 0 auto;
+    display: block;
+    margin: 3px auto;
     width: 100%;
 }
 nav > ul{
@@ -118,7 +145,7 @@ nav > ul > li > a{
     display: inline-block;
     padding: 0.5em;
     text-align: center;
-    color:  rgb(12, 54, 168);
+    color:  var(--marin_blue);
 }
 nav > ul > li > a:hover{
     cursor: pointer;
@@ -129,46 +156,44 @@ nav > ul > li > a:hover{
 }
 .activePage{
     cursor: pointer;
-    /* background: rgba(12, 54, 168, 0.603); */
-
-    background-color: var(--marin_hover);
-    /* background-image: linear-gradient(0deg, #ffffff00, #02119c98); */
+    background-color: var(--marin_blue);
     color: #fff
 }
 
-main{
-    min-height: 100%;
-    width: 100%;
-    background-image: url('./images/prelbakgrund.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: center center; */
-    background-position: 0em -3em;
-}
 #Hem-Page{
     width: 100%;
-    margin-top: 6.2em;
+    /* margin-top: 6.2em; */
     opacity: 0; 
 }
-#Hem-Page > h2{
-    width: 35%;
-    margin: 0 auto auto 53%;
+#hemdiv{
+    width: 75%;
+    margin: 1.2em auto auto;    
+    align-items: center;
+}
+#Hem-Page > #hemdiv > h2{
+    font-family: 'Caveat', cursive;
+    /* font-weight: 600; */
+    width: auto;
+    margin: 1% auto auto 0px;
     height: auto;
     font-size: 3.3em;
     letter-spacing: 0.1em;
-    color: rgb(12, 54, 168);
-    /* background-image: linear-gradient(45deg, #ffffff, #bbbfe2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent; */
-    /* background-clip: unset; */
-    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.979); */
-    text-transform: uppercase;
+    color: var(--marin_blue);
+    /* text-transform: uppercase; */
     display: grid;
     place-items: center;   
+    justify-content: center;
 } 
-.hem-lower{
+
+#hemtext{
+    /* width: 75%; */
+    margin-top: 2em;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    place-items: center;
+}
+/* .hem-lower{
     width: 100%;
     height: 34%;
     background-color: rgb(255, 255, 255);
@@ -176,47 +201,73 @@ main{
     display: flex;
     justify-content: center;
     z-index: 0;
-}
+} */
 .hem-knappar{
     margin-top: 18%;
     width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 .hem-knappar > a{
-    width: 10em;
-    padding: 0.5em 0;
-    margin: 0.2em;
-    border: 0.16em solid var(--marin_blue);
-    box-sizing: border-box;
+    width: 80%;
+    height: 15em;
+    margin: 1em;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.664);
+    /* box-shadow: 0 0 2px 0 rgb(17, 17, 17); */
     text-decoration:none;
     text-transform:uppercase;
-    font-weight:600;
-    color: var(--marin_blue);
-    /* border-color: rgb(255, 255, 255); */
-    transition: all 0.15s;
-    background: var(--marin_bg);
+    /* align-items: center;
+    justify-content: center;
+    vertical-align: middle; */
+    text-align: center;
+    padding: 0px;
+    line-height: 15em;
+    font-weight:500;
+    letter-spacing: 4px;
+    font-size: 1.1em;
 }
+
 .hem-knappar > a:hover{
-    color: var(--marin_hover);
-    border-color: var(--marin_hover);
-    background: var(--marin_bg_hover);
     cursor: pointer;
 }
-.hem-knappar > a:active{
+/* .hem-knappar > a:active{
     color:var(--marin_hover);
     border-color:var(--marin_hover);
     background: var(--marin_bg_hover);
+} */
+#tjänstknapp {
+    background-image: url('./images/knapp1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-/*    <~~~~ DESKTOP layout start ~~~   */
+#kontaktknapp {
+    background-image: url('./images/knapp2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 @media screen and (min-width: 768px) { 
 
-    /*    <~~~~ HEADER NAVIGATION desktop start~~~    */    
+    /*    <~~~~ dator-storlek ~~~    */    
+
+    #content{
+        height: 100vh;
+        width: 80%;
+        margin: 0%, 10%;
+        background-color: rgba(255, 255, 255, 0.877);
+        /* background: radial-gradient(circle at center, rgba(255, 255, 255, 0.493) 0, rgba(255, 255, 255, 0.808), rgba(255, 255, 255, 0.911) 100%); */
+        /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.664); */
+        /* display: block; */
+    
+    }
     nav{
         visibility: visible;
         display: inline-block;
-        margin: 0 auto;
+        margin: 3px auto auto;
         width: 60%;
     }
     .navDesktop{
@@ -250,7 +301,23 @@ main{
     nav > ul > li > a{
         padding: 1em 1.5em;
     }
-    /*    ~~~~ NAVIGATION desktop end ~~~>   */
+    
+    .hem-knappar > a{
+        width: 15em;
+        height: 15em;
+        margin: 1em;
+        /* color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.664);
+        text-decoration:none;
+        text-transform:uppercase;
+
+        text-align: center;
+        padding: 0px;
+        line-height: 15em;
+        font-weight:500;
+        letter-spacing: 4px;
+        font-size: 1.1em; */
+    }
 
 
 }

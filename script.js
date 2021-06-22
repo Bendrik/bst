@@ -90,13 +90,13 @@ $(document).ready(function() {
         });
 
         //lägger till/tar bort navBar-show, dvs. döljer eller visar navigerings-menyn
-        function classToggle() {
-            const navs = document.querySelectorAll('nav');
-            navs.forEach(nav => nav.classList.toggle('navBar-show'));
-        }
+        // function classToggle() {
+        //     const navs = document.querySelectorAll('nav');
+        //     navs.forEach(nav => nav.classList.toggle('navBar-show'));
+        // }
         
-        //klickar på hamburgermenu-knappen i mobil-vy, så anropas funktionen ovanför som visar/döljer navigeringen
-        document.querySelector('#navButton-toggle').addEventListener('click', classToggle);
+        // //klickar på hamburgermenu-knappen i mobil-vy, så anropas funktionen ovanför som visar/döljer navigeringen
+        // document.querySelector('#navButton-toggle').addEventListener('click', classToggle);
 
     /*    ~~~~ Navigering end ~~~>   */
 
@@ -105,6 +105,9 @@ $(document).ready(function() {
 
         //tjänster-knappen klick
         $('#tjänstknapp').click(function (event) {
+        //$(".hem-knappar").on("click", "#tjänstknapp", function(event){
+        //$(".hem-knappar #tjänstknapp").on('click', function () {
+        //document.getElementById('tjänstknapp').addEventListener("click", function(){
             event.preventDefault();
             loadPage('Tjänster');
         });
@@ -115,12 +118,12 @@ $(document).ready(function() {
             loadPage('Kontakt');
 
             //ladda json
-            $.getJSON(
-                'res/about-data.json',
-                function (data) {
-                    displayAbout(data.person);
-                }
-            );
+            // $.getJSON(
+            //     'res/about-data.json',
+            //     function (data) {
+            //         displayAbout(data.person);
+            //     }
+            // );
         });
         
     /*    ~~~~ Hem end ~~~>   */
