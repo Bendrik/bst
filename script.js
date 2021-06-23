@@ -104,27 +104,37 @@ $(document).ready(function() {
     /*    <~~~ Hem start ~~~~   */
 
         //tjänster-knappen klick
-        $('#tjänstknapp').click(function (event) {
-        //$(".hem-knappar").on("click", "#tjänstknapp", function(event){
-        //$(".hem-knappar #tjänstknapp").on('click', function () {
-        //document.getElementById('tjänstknapp').addEventListener("click", function(){
+        // $('#tjänstknapp').click(function (event) {
+        //     event.preventDefault();
+        //     loadPage('Tjänster');
+        // });
+
+        $('#divknapptjänst').click(function (event) {
             event.preventDefault();
             loadPage('Tjänster');
         });
-
-        //kontaktknapp klick
-        $('#kontaktknapp').click(function (event) {
+        $('#divknappom').click(function (event) {
+            event.preventDefault();
+            loadPage('Om');
+        });
+        $('#divknappkontakt').click(function (event) {
             event.preventDefault();
             loadPage('Kontakt');
-
-            //ladda json
-            // $.getJSON(
-            //     'res/about-data.json',
-            //     function (data) {
-            //         displayAbout(data.person);
-            //     }
-            // );
         });
+
+        //kontaktknapp klick
+        // $('#kontaktknapp').click(function (event) {
+        //     event.preventDefault();
+        //     loadPage('Kontakt');
+
+        //     //ladda json
+        //     // $.getJSON(
+        //     //     'res/about-data.json',
+        //     //     function (data) {
+        //     //         displayAbout(data.person);
+        //     //     }
+        //     // );
+        // });
         
     /*    ~~~~ Hem end ~~~>   */
 

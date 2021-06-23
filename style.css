@@ -11,17 +11,19 @@ html, body{
     padding: 0;
     margin: 0;
     /* font-family: sans-serif;  */
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     background: rgb(255, 255, 255);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
 }
 
 main{
     height: 100%;
     width: 100%;
     /* background-image: url('./images/prelbakgrund.jpg'); */
-    background-image: url('./images/hav.jpg');
+    /* background-image: url('./images/hav.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     /* background-position: center center; */
     background-position: 0em -3em;
     background-attachment: fixed;
@@ -39,11 +41,8 @@ main{
 #content{
     height: 100%;
     width: 100%;
-    margin: 0%, 10%;
-    background-color: rgba(255, 255, 255, 0.685);
-    /* background: radial-gradient(circle at center, rgba(255, 255, 255, 0.493) 0, rgba(255, 255, 255, 0.808), rgba(255, 255, 255, 0.911) 100%); */
-    /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.664); */
-    /* display: block; */
+    /* margin: 0%, 10%; */
+    background-color: rgb(255, 255, 255)
 
 }
 
@@ -166,33 +165,42 @@ nav > ul > li > a:hover{
     opacity: 0; 
 }
 #hemdiv{
-    width: 85%;
-    margin: 1.2em auto auto;    
+    width: 100%;
+    height: 60vh;
+    margin: 0;    
     align-items: center;
+    background-image: url('./images/sol.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: silver;
 }
 #Hem-Page > #hemdiv > h2{
-    font-family: 'Caveat', cursive;
-    /* font-weight: 600; */
+    font-weight: 600;
     width: auto;
-    margin: 1% auto auto 0px;
+    margin: 0 auto auto 0px;
+    padding-top: 1em;
+    margin-left: 10%;
     height: auto;
-    font-size: 2em;
+    font-size: 1.5em;
     /* letter-spacing: 0.1em; */
     color: var(--marin_blue);
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     display: grid;
-    place-items: center;   
+    /* place-items: center;   
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 } 
 
 #hemtext{
-    /* width: 75%; */
-    margin-top: 2em;
-    align-items: center;
-    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1em;
+    /* align-items: center;
+    justify-content: center; */
     display: grid;
-    place-items: center;
+    /* place-items: center; */
+    font-weight: normal;
 }
 /* .hem-lower{
     width: 100%;
@@ -204,12 +212,13 @@ nav > ul > li > a:hover{
     z-index: 0;
 } */
 .hem-knappar{
-    margin-top: 18%;
+    margin-top: -18vh;
     width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+    /* position: static; */
 }
 .hem-knappar > a{
     width: 85%;
@@ -239,8 +248,33 @@ nav > ul > li > a:hover{
     border-color:var(--marin_hover);
     background: var(--marin_bg_hover);
 } */
+.knappdiv{
+    margin: 1em;
+}
+
+.knappdiv:hover{
+    cursor: pointer;
+}
+
+.bildknapp {
+    width: 11em;
+    height: 11em;
+    display: block;
+    border-radius: 50%;
+    padding: 0.5em;
+    background-color: rgb(255, 255, 255);
+    border: 10px solid white;
+    box-shadow: -1px 0 5px -3px black;
+}
+
 #tjänstknapp {
     background-image: url('./images/knapp1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-clip: content-box; */
+}
+#omknapp {
+    background-image: url('./images/knapp3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -250,21 +284,26 @@ nav > ul > li > a:hover{
     background-size: cover;
 }
 
+.länktext {
+    text-decoration: underline;
+}
+
+
 
 @media screen and (min-width: 768px) { 
 
     /*    <~~~~ dator-storlek ~~~    */    
 
-    #content{
+    /* #content{
         height: 100vh;
         width: 80%;
-        margin: 0%, 10%;
+        margin: 0% 10%;
         background-color: rgba(255, 255, 255, 0.877);
         /* background: radial-gradient(circle at center, rgba(255, 255, 255, 0.493) 0, rgba(255, 255, 255, 0.808), rgba(255, 255, 255, 0.911) 100%); */
         /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.664); */
         /* display: block; */
     
-    }
+    /*} */
     nav{
         visibility: visible;
         display: inline-block;
@@ -303,44 +342,55 @@ nav > ul > li > a:hover{
         padding: 1em 1.5em;
     }
 
-    #hemdiv{
+    /* #hemdiv{
         width: 75%;
         margin: 1.2em auto auto;    
         align-items: center;
-    }
+    }*/
+
+
 
     #Hem-Page > #hemdiv > h2{
-        font-family: 'Caveat', cursive;
-        /* font-weight: 600; */
-        width: auto;
-        margin: 1% auto auto 0px;
-        height: auto;
-        font-size: 3.3em;
-        letter-spacing: 0.1em;
-        color: var(--marin_blue);
-        /* text-transform: uppercase; */
-        display: grid;
-        place-items: center;   
-        justify-content: center;
+    font-weight: 600;
+    width: auto;
+    margin: 0 auto auto 0px;
+    padding: 8vh 20% 0;
+    height: auto;
+    font-size: 2.5em;
+    letter-spacing: 0.02em;
+    color: var(--marin_blue);
+    display: grid;
     } 
-    
-    .hem-knappar > a{
-        width: 15em;
-        height: 15em;
-        margin: 1em;
-        line-height: 15em;
-        /* color: white;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.664);
-        text-decoration:none;
-        text-transform:uppercase;
 
-        text-align: center;
-        padding: 0px;
-        
-        font-weight:500;
-        letter-spacing: 4px;
-        font-size: 1.1em; */
+    #hemtext{
+        width: 40%;
+        margin-left: 20%;
+        margin-top: 1.5em;
+        font-size: 1.3em;
+        /* align-items: center;
+        justify-content: center; */
+        display: grid;
+        /* place-items: center; */
+        font-weight: normal;
     }
+        
+        /* .hem-knappar > a{
+            width: 15em;
+            height: 15em;
+            margin: 1em;
+            line-height: 15em; */
+            /* color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.664);
+            text-decoration:none;
+            text-transform:uppercase;
+
+            text-align: center;
+            padding: 0px;
+            
+            font-weight:500;
+            letter-spacing: 4px;
+            font-size: 1.1em; */
+        /* } */
 
 
 }
