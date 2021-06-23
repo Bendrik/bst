@@ -180,16 +180,16 @@ nav > ul > li > a:hover{
     width: auto;
     margin: 0 auto auto 0px;
     padding-top: 1em;
-    margin-left: 10%;
+    /* margin-left: 10%; */
     height: auto;
     font-size: 1.5em;
     /* letter-spacing: 0.1em; */
     color: var(--marin_blue);
     text-transform: uppercase;
     display: grid;
-    /* place-items: center;   
+    place-items: center;   
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 } 
 
 #hemtext{
@@ -201,6 +201,7 @@ nav > ul > li > a:hover{
     display: grid;
     /* place-items: center; */
     font-weight: normal;
+    text-align: center;
 }
 /* .hem-lower{
     width: 100%;
@@ -360,6 +361,9 @@ nav > ul > li > a:hover{
     letter-spacing: 0.02em;
     color: var(--marin_blue);
     display: grid;
+    place-items: unset; 
+    justify-content: unset;
+    align-items: unset;
     } 
 
     #hemtext{
@@ -372,6 +376,7 @@ nav > ul > li > a:hover{
         display: grid;
         /* place-items: center; */
         font-weight: normal;
+        text-align: unset;
     }
         
         /* .hem-knappar > a{
