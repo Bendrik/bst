@@ -1,17 +1,17 @@
 $(document).ready(function() {
 
     //dölj alla sidor-funktion
-    function hidePageSections() { 
-        $("#Hem-Page").hide();
-        $("#Tjänster-Page").hide();
-        $("#Om-Page").hide();
-        $("#Kontakt-Page").hide();
-    }
+    // function hidePageSections() { 
+    //     // $("#Hem-Page").hide();
+    //     // $("#Tjänster-Page").hide();
+    //     // $("#Om-Page").hide();
+    //     // $("#Kontakt-Page").hide();
+    // }
 
     //döljer sidor och visar startsidan
-    hidePageSections();
-    $("#Hem-Page").show(); 
-    $("#Hem-Page").animate({opacity: '1'}, 1000); 
+    // hidePageSections();
+    // $("#Hem-Page").show(); 
+    $("#Hem-Page").animate({opacity: '1'}, 700); 
 
     
     /*    <~~~ Navigering start ~~~~   */
@@ -19,24 +19,25 @@ $(document).ready(function() {
         //funktion som anropas när man klickar på olika navigeringslänkar, döljer alla sidor, uppdaterar vilken sida som är aktiv just nu,
         //visar och uppdaterar Page-Title i mobilvyn visar och döljer navbar i mobilvyn
         function loadPage(clickedId){ 
-            hidePageSections(); 
-            $('#' + clickedId + '-Page').show();
-            $('.menuBtn').removeClass('activePage');
-            $('#'+clickedId).addClass('activePage');
+            //hidePageSections(); 
+            // $('#' + clickedId + '-Page').show();
+            // $('.menuBtn').removeClass('activePage');
+            // $('#'+clickedId).addClass('activePage');
 
-            $('#navBar-pageTitle').html(clickedId);
-            classToggle();
+            // $('#navBar-pageTitle').html(clickedId);
+            // classToggle();
         }
 
         //klick på Hem
         $('#Hem').click(function (event) {
             event.preventDefault();
-            loadPage('Hem');
+            //loadPage('Hem');
+            window.location.href = 'index.html';
             // $("#Hem").css({"opacity": "0"});
             // $("#Hem").animate({opacity: '1'}, 1500);
         });
 
-        //funktion som används när vi klickar på loggan i mobile eller desktop läge. 
+        //klick på loggan i mobile eller desktop läge
         function loadLogoHemPage() {
             hidePageSections(); 
             $('#Hem-Page').show();
@@ -48,6 +49,10 @@ $(document).ready(function() {
             // $("#Hem").css({"opacity": "0"});
             // $("#Hem").animate({opacity: '1'}, 1500);
         }
+
+        // function load_tjänster() {
+        //     document.getElementById("innehåll").innerHTML='<object type="text/html" data="tjanster.html" ></object>';
+        // }
 
         //klick på logga
         $('#header-logo').click(function (event) {
@@ -64,13 +69,17 @@ $(document).ready(function() {
         //klick på tjänster
         $('#Tjänster').click(function (event) {
             event.preventDefault();
-            loadPage('Tjänster');
+            //load_tjänster();
+            //loadPage('Tjänster');
+            // history.pushState({}, 'Tjänster', '/tjänster');
+            window.location.href = 'tjanster.html';
         });
 
         //klick på om
         $('#Om').click(function (event) {
             event.preventDefault();
-            loadPage('Om');
+            //loadPage('Om');
+            window.location.href = 'om.html';
 
             //laddar in från jsonfil
             // $.getJSON(
@@ -86,7 +95,8 @@ $(document).ready(function() {
             event.preventDefault();
             loadPage('Kontakt');
             //tömma formulär
-            $('#contactSubmitMessage').text("");
+            // $('#contactSubmitMessage').text("");
+            window.location.href = 'kontakt.html';
         });
 
         //lägger till/tar bort navBar-show, dvs. döljer eller visar navigerings-menyn
@@ -109,17 +119,20 @@ $(document).ready(function() {
         //     loadPage('Tjänster');
         // });
 
-        $('#divknapptjänst').click(function (event) {
+        $('#divknapptjanst').click(function (event) {
             event.preventDefault();
-            loadPage('Tjänster');
+            // loadPage('Tjänster');
+            window.location.href = 'tjanster.html';
         });
         $('#divknappom').click(function (event) {
             event.preventDefault();
-            loadPage('Om');
+            // loadPage('Om');
+            window.location.href = 'om.html';
         });
         $('#divknappkontakt').click(function (event) {
             event.preventDefault();
-            loadPage('Kontakt');
+            // loadPage('Kontakt');
+            window.location.href = 'kontakt.html';
         });
 
         //kontaktknapp klick

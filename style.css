@@ -3,6 +3,7 @@
     --marin_hover: #02119c98;
     --marin_bg: rgba(12, 54, 168, 0.123);
     --marin_bg_hover: #02119c57;
+    --rutorbg: rgb(207, 224, 245);
 }
 
 html, body{
@@ -25,7 +26,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover; */
     /* background-position: center center; */
-    background-position: 0em -3em;
+    background-position: center top;
     background-attachment: fixed;
     display: flex;
     /* align-items: center; */
@@ -163,45 +164,62 @@ nav > ul > li > a:hover{
     width: 100%;
     /* margin-top: 6.2em; */
     opacity: 0; 
+    /* background-color: var(--rutorbg); */
 }
 #hemdiv{
     width: 100%;
     height: 60vh;
     margin: 0;    
     align-items: center;
-    background-image: url('./images/sol.jpg');
+    /* background-image: url('./images/sol.jpg'); */
+    background-image: url('./images/landet4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-color: silver;
+    position: relative;
 }
-#Hem-Page > #hemdiv > h2{
+
+#hemblur{
+    background-color: #fcfdcc00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#Hem-Page > #hemdiv > #hemblur > h2, 
+#tjanstdiv > h2, 
+#omdiv > h2,
+#kontaktdiv > h2 {
     font-weight: 600;
     width: auto;
     margin: 0 auto auto 0px;
-    padding-top: 1em;
-    /* margin-left: 10%; */
+    padding-top: 1.5em;
+    margin-left: 8%;
     height: auto;
     font-size: 1.5em;
     /* letter-spacing: 0.1em; */
     color: var(--marin_blue);
     text-transform: uppercase;
     display: grid;
-    place-items: center;   
+    /* place-items: center;   
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 } 
 
 #hemtext{
     width: 80%;
-    margin-left: 10%;
+    margin-left: 8%;
     margin-top: 1em;
     /* align-items: center;
     justify-content: center; */
     display: grid;
     /* place-items: center; */
     font-weight: normal;
-    text-align: center;
+    /* color: white; */
+    /* text-align: center; */
+    /* text-shadow: 1px 1px rgb(255, 255, 255); */
 }
 /* .hem-lower{
     width: 100%;
@@ -219,6 +237,7 @@ nav > ul > li > a:hover{
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+    /* color: var(--marin_blue); */
     /* position: static; */
 }
 .hem-knappar > a{
@@ -266,9 +285,11 @@ nav > ul > li > a:hover{
     background-color: rgb(255, 255, 255);
     border: 10px solid white;
     box-shadow: -1px 0 5px -3px black;
+    z-index: 5;
+    position: relative;
 }
 
-#tjänstknapp {
+#tjanstknapp {
     background-image: url('./images/knapp1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -285,10 +306,226 @@ nav > ul > li > a:hover{
     background-size: cover;
 }
 
-.länktext {
+.lanktext {
     text-decoration: underline;
+    font-weight: 600;
+    font-size: 1.1em;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.8px;
 }
 
+
+/* tjänst-sida */
+#tjanstdiv{
+    width: 100%;
+    height: 55vh;
+    /* background-color: turquoise; */
+    background-image: url("./images/horisont.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+/* #tjanstdiv > h2 {
+    margin: 0 auto auto;
+    padding-top: 2em;
+} */
+
+/* .tjanstruta{
+    margin: 1.5em;
+} */
+
+.tjanstrutor{
+    margin-top: -5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    flex-wrap: wrap;
+    z-index: 5;
+    /* color: var(--marin_blue); */
+    /* position: static; */
+}
+
+.tjanstknapp {
+    width: 11em;
+    height: 11em;
+    display: block;
+    border-radius: 50%;
+    padding: 0.5em;
+    background-color: rgb(255, 255, 255);
+    border: 10px solid white;
+    box-shadow: -1px 0 5px -3px black;
+    z-index: 5;
+    position: relative;
+}
+
+.tjanstruta{
+    margin: 1em;
+    width: 80vh;
+    /* height: 16em; */
+    height: auto;
+    /* background-color: rgb(219, 219, 219); */
+    background-color: var(--rutorbg);
+    /* background-image: linear-gradient(to bottom, rgba(219, 219, 219, 0.418),rgba(219, 219, 219, 0)); */
+    /* border: 10px solid rgb(255, 255, 255); */
+    box-shadow: -1px 0 5px -3px black;
+    z-index: 1;
+    /* position: relative; */
+    /* padding-left: 3em; */
+
+    border-radius: 2%;
+}
+
+.tjanstrubrik{
+    /* padding-top: 6em; */
+    color: var(--marin_blue);
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.gods{
+    float: left;
+}
+
+#godsbild{
+    margin: 1em;
+    width: 150px;
+    height: 210px;
+    background-image: url('./images/gods.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: yellowgreen; */
+}
+
+#renoveringsbild{
+    margin: 1em;
+    width: 210px;
+    height: 150px;
+    background-image: url('./images/renovering.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tjansttext{
+    padding: 1em;
+}
+
+.lista, .tjansttext{
+    color: rgb(27, 27, 27);
+    font-weight: normal;
+    font-size: 1.2em;
+    /* letter-spacing: 0.2px; */
+}
+
+#persontransport{
+    background-color: slategray;
+}
+
+#godstransport{
+    background-color: steelblue;
+}
+
+#tillsyn{
+    background-color: thistle;
+}
+
+#renovering{
+    background-color: violet;
+}
+
+/* om oss-sida*/
+
+
+#omdiv{
+    /* background-color: rgb(129, 129, 129); */
+    background-image: url("./images/landetsol2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center -29em; */
+    background-position: center calc(50% - 70px);
+    height: 60vh;
+}
+
+#ommig, #ombat{
+    width: 90vw;
+    margin: auto;
+    margin-top: -6em;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(207, 224, 245);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: -1px 0 5px -3px black;
+}
+
+#ombat{
+    margin-top: 4%;
+    margin-top: 2%;
+    margin-bottom: 3em;
+    flex-wrap: wrap-reverse;
+}
+
+#migbild, #batbild{
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: -1px 0 5px -3px black;
+}
+
+#migbild{
+    width: 19em;
+    height: 19em;
+    background-image: url("./images/kapten.jpg");
+}
+#batbild{
+    width: 19em;
+    height: 19em;
+    background-image: url("./images/aronetclose.jpg");
+}
+
+#migtext, #battext{
+    width: 90%;
+    font-size: 1em;
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* kontakt-sida */
+
+#kontaktdiv{
+    background-image: url("./images/aronet2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center -29em; */
+    background-position: center center;
+    height: 60vh;
+}
+#kontaktsida{
+    width: 90vw;
+    /* margin-left: 5vw; */
+    margin: auto;
+    margin-top: -3em;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(207, 224, 245);
+    /* display: flex;
+    flex-wrap: wrap; */
+    border-radius: 10px;
+    box-shadow: -1px 0 5px -3px black;
+    line-height: 1.6;
+    font-size: 1.2em;
+    text-align: center;
+    /* font-weight: 500; */
+}
 
 
 @media screen and (min-width: 768px) { 
@@ -349,27 +586,36 @@ nav > ul > li > a:hover{
         align-items: center;
     }*/
 
+    /* #hemdiv{
+        background-position: center center;
+    } */
 
+    .hem-knappar{
+        margin-top: -12vh;
+    }
 
-    #Hem-Page > #hemdiv > h2{
-    font-weight: 600;
-    width: auto;
-    margin: 0 auto auto 0px;
-    padding: 8vh 20% 0;
-    height: auto;
-    font-size: 2.5em;
-    letter-spacing: 0.02em;
-    color: var(--marin_blue);
-    display: grid;
-    place-items: unset; 
-    justify-content: unset;
-    align-items: unset;
+    #Hem-Page > #hemdiv > #hemblur > h2, 
+    #tjanstdiv > h2, 
+    #omdiv > h2, 
+    #kontaktdiv > h2 {
+        font-weight: 600;
+        width: auto;
+        margin: 0 auto auto 0px;
+        padding: 8vh 20% 0;
+        height: auto;
+        font-size: 2.5em;
+        letter-spacing: 0.02em;
+        color: var(--marin_blue);
+        display: grid;
+        place-items: unset; 
+        justify-content: unset;
+        align-items: unset;
     } 
 
     #hemtext{
         width: 40%;
         margin-left: 20%;
-        margin-top: 1.5em;
+        margin-top: 0.8em;
         font-size: 1.3em;
         /* align-items: center;
         justify-content: center; */
@@ -377,6 +623,7 @@ nav > ul > li > a:hover{
         /* place-items: center; */
         font-weight: normal;
         text-align: unset;
+        text-shadow: unset;
     }
         
         /* .hem-knappar > a{
@@ -397,5 +644,34 @@ nav > ul > li > a:hover{
             font-size: 1.1em; */
         /* } */
 
+/* om-sida + kontaktruta */
+
+    #migtext, #battext{
+        /* margin-left: 20em; */
+        max-width: 60%;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    #ommig{
+        margin-top: -4em;
+    }
+
+    #ommig, #ombat{
+        width: 70%;
+        margin-left: 15%;
+    }
+
+/*kontakt-sida*/
+
+    #kontaktdiv{
+        background-position: center calc(50% - 90px);
+    }
+
+    #kontaktsida{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: -1.7em;
+    }
 
 }
