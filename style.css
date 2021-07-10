@@ -217,6 +217,7 @@ nav > ul > li > a:hover{
     display: grid;
     /* place-items: center; */
     font-weight: normal;
+    font-weight: 600;
     /* color: white; */
     /* text-align: center; */
     /* text-shadow: 1px 1px rgb(255, 255, 255); */
@@ -320,7 +321,7 @@ nav > ul > li > a:hover{
     width: 100%;
     height: 55vh;
     /* background-color: turquoise; */
-    background-image: url("./images/horisont.jpeg");
+    background-image: url("./images/horisont_mobil.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -467,7 +468,6 @@ nav > ul > li > a:hover{
 
 #ombat{
     margin-top: 4%;
-    margin-top: 2%;
     margin-bottom: 3em;
     flex-wrap: wrap-reverse;
 }
@@ -488,7 +488,7 @@ nav > ul > li > a:hover{
 #batbild{
     width: 19em;
     height: 19em;
-    background-image: url("./images/aronetclose.jpg");
+    background-image: url("./images/aronetclose.JPG");
 }
 
 #migtext, #battext{
@@ -624,6 +624,7 @@ nav > ul > li > a:hover{
         font-weight: normal;
         text-align: unset;
         text-shadow: unset;
+        font-weight: 500;
     }
         
         /* .hem-knappar > a{
@@ -643,6 +644,10 @@ nav > ul > li > a:hover{
             letter-spacing: 4px;
             font-size: 1.1em; */
         /* } */
+    
+    #tjanstdiv{
+        background-image: url("./images/horisont.jpeg");
+    }
 
 /* om-sida + kontaktruta */
 
