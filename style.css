@@ -337,7 +337,7 @@ nav > ul > li > a:hover{
 } */
 
 .tjanstrutor{
-    margin-top: -5em;
+    margin-top: -4em;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -363,6 +363,7 @@ nav > ul > li > a:hover{
 
 .tjanstruta{
     margin: 1em;
+    margin-bottom: 5em;
     width: 80vh;
     /* height: 16em; */
     height: auto;
@@ -392,25 +393,51 @@ nav > ul > li > a:hover{
 .gods{
     float: left;
 }
-
+.tjanstbild{
+    width: 16em;
+    height: 16em;
+    margin: auto;
+    margin-top: -5em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: -1px 0 5px -3px black;
+    align-items: center;
+    justify-content: center;
+    background-position: center center;
+}
+#transportbild{
+    background-image: url("./images/roddbat.jpeg");
+}
 #godsbild{
+    background-image: url("./images/gods.jpeg");
+}
+#byggbild{
+    background-image: url("./images/renovering.jpg");
+    background-position: calc(50% + 28px) center;
+}
+#tillsynbild{
+    background-image: url("./images/fiskmasar2.jpeg");
+}
+
+/* #godsbild{
     margin: 1em;
     width: 150px;
     height: 210px;
     background-image: url('./images/gods.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: yellowgreen; */
-}
+} */
 
-#renoveringsbild{
+/* #renoveringsbild{
     margin: 1em;
     width: 210px;
     height: 150px;
     background-image: url('./images/renovering.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .tjansttext{
     padding: 1em;
@@ -423,21 +450,6 @@ nav > ul > li > a:hover{
     /* letter-spacing: 0.2px; */
 }
 
-#persontransport{
-    background-color: slategray;
-}
-
-#godstransport{
-    background-color: steelblue;
-}
-
-#tillsyn{
-    background-color: thistle;
-}
-
-#renovering{
-    background-color: violet;
-}
 
 /* om oss-sida*/
 
