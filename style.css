@@ -271,7 +271,7 @@ nav > ul > li > a:hover{
     background: var(--marin_bg_hover);
 } */
 .knappdiv{
-    margin: 8px;
+    margin: 6px;
 }
 
 .knappdiv:hover{
@@ -310,7 +310,7 @@ nav > ul > li > a:hover{
 
 .lanktext {
     text-decoration: underline;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.1em;
     /* text-transform: uppercase; */
     letter-spacing: 0.8px;
@@ -523,9 +523,9 @@ nav > ul > li > a:hover{
     background-image: url("./images/aronet2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: right center; */
-    background-position: calc(50% - 20px) center;
-    height: 60vh;
+    background-position: right center;
+    /* background-position: calc(50% - 20px) center; */
+    height: 45vh;
 }
 #kontaktsida{
     width: 90vw;
@@ -728,10 +728,11 @@ nav > ul > li > a:hover{
 
 /*kontakt-sida*/
 
-    #kontaktdiv{
+    /* #kontaktdiv{
         background-position: center calc(50% - 90px);
         background-size: cover;
-    }
+        height: 60vh;
+    } */
 
     #kontaktsida{
         width: 50%;
@@ -765,5 +766,22 @@ nav > ul > li > a:hover{
         width: 95vw;
         margin: auto;
         margin-top: -5em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+    #kontaktdiv{
+        background-position: bottom calc(50% - 90px);
+        background-size: cover;
+        height: 60vh;
+    }
+    
+  }
+@media screen and (min-width: 1024px) {
+    #kontaktdiv{
+        background-position: center calc(50% - 90px);
+        background-size: cover;
+        height: 60vh;
     }
 }
