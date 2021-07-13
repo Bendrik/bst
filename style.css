@@ -157,7 +157,8 @@ nav > ul > li > a:hover{
 .activePage{
     cursor: pointer;
     background-color: var(--marin_blue);
-    color: #fff
+    color: #fff;
+    /* border-radius: 10px; */
 }
 
 #Hem-Page{
@@ -232,7 +233,7 @@ nav > ul > li > a:hover{
     z-index: 0;
 } */
 .hem-knappar{
-    margin-top: -18vh;
+    margin-top: -4em;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -270,7 +271,7 @@ nav > ul > li > a:hover{
     background: var(--marin_bg_hover);
 } */
 .knappdiv{
-    margin: 1em;
+    margin: 8px;
 }
 
 .knappdiv:hover{
@@ -278,13 +279,13 @@ nav > ul > li > a:hover{
 }
 
 .bildknapp {
-    width: 11em;
-    height: 11em;
+    width: 22vw;
+    height: 22vw;
     display: block;
     border-radius: 50%;
     padding: 0.5em;
     background-color: rgb(255, 255, 255);
-    border: 10px solid white;
+    border: 7px solid white;
     box-shadow: -1px 0 5px -3px black;
     z-index: 5;
     position: relative;
@@ -309,7 +310,7 @@ nav > ul > li > a:hover{
 
 .lanktext {
     text-decoration: underline;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.1em;
     /* text-transform: uppercase; */
     letter-spacing: 0.8px;
@@ -317,13 +318,14 @@ nav > ul > li > a:hover{
 
 
 /* tjänst-sida */
+
 #tjanstdiv{
     width: 100%;
     height: 55vh;
     /* background-color: turquoise; */
     background-image: url("./images/horisont_mobil.jpeg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 200%;
     background-position: center bottom;
 }
 
@@ -363,8 +365,8 @@ nav > ul > li > a:hover{
 
 .tjanstruta{
     margin: 1em;
-    margin-bottom: 5em;
-    width: 80vh;
+    /* margin-bottom: 1.5em; */
+    width: 90vw;
     /* height: 16em; */
     height: auto;
     /* background-color: rgb(219, 219, 219); */
@@ -376,28 +378,32 @@ nav > ul > li > a:hover{
     /* position: relative; */
     /* padding-left: 3em; */
 
-    border-radius: 2%;
+    border-radius: 10px;
 }
 
 .tjanstrubrik{
     /* padding-top: 6em; */
-    color: var(--marin_blue);
+    margin-top: 0.8em;
+    margin-bottom: 1.5em;
+    /* color: var(--marin_blue); */
+    /* color: white; */
     position: relative;
     z-index: 2;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.8px;
     font-size: 1.5em;
     text-align: center;
+    font-weight: 500;
 }
 
 .gods{
     float: left;
 }
 .tjanstbild{
-    width: 16em;
-    height: 16em;
+    width: 17em;
+    height: 17em;
     margin: auto;
-    margin-top: -5em;
+    margin-top: 1em;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
@@ -441,12 +447,15 @@ nav > ul > li > a:hover{
 
 .tjansttext{
     padding: 1em;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .lista, .tjansttext{
     color: rgb(27, 27, 27);
     font-weight: normal;
     font-size: 1.2em;
+    margin-right: 5px;
     /* letter-spacing: 0.2px; */
 }
 
@@ -455,12 +464,10 @@ nav > ul > li > a:hover{
 
 
 #omdiv{
-    /* background-color: rgb(129, 129, 129); */
     background-image: url("./images/landetsol2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: center -29em; */
-    background-position: center calc(50% - 70px);
+    background-position: right calc(50% - 70px);
     height: 60vh;
 }
 
@@ -479,8 +486,8 @@ nav > ul > li > a:hover{
 }
 
 #ombat{
-    margin-top: 4%;
-    margin-bottom: 3em;
+    margin-top: 1.5em;
+    margin-bottom: 5em;
     flex-wrap: wrap-reverse;
 }
 
@@ -516,8 +523,8 @@ nav > ul > li > a:hover{
     background-image: url("./images/aronet2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-position: center -29em; */
-    background-position: center center;
+    /* background-position: right center; */
+    background-position: calc(50% - 20px) center;
     height: 60vh;
 }
 #kontaktsida{
@@ -606,6 +613,16 @@ nav > ul > li > a:hover{
         margin-top: -12vh;
     }
 
+    .bildknapp {
+        width: 11em;
+        height: 11em;
+        border: 10px solid white;
+    }
+
+    .knappdiv{
+        margin: 1em;
+    }
+
     #Hem-Page > #hemdiv > #hemblur > h2, 
     #tjanstdiv > h2, 
     #omdiv > h2, 
@@ -659,9 +676,34 @@ nav > ul > li > a:hover{
     
     #tjanstdiv{
         background-image: url("./images/horisont.jpeg");
+        background-size: cover;
+    }
+
+    .tjanstbild{
+        margin-top: -6em;
+        height: 15em;
+        width: 15em;
+    }
+    /* .tjansttext{
+        max-width: 60%;
+        margin-left: 15%;
+    }*/
+
+    .tjanstruta{
+        margin: 1.5em;
+        margin-top: 6em;
+        width: 35vw;
+    }
+
+    .tjanstrutor{
+        margin-top: -4em;
     }
 
 /* om-sida + kontaktruta */
+
+    #omdiv{
+        background-position: center calc(50% - 70px);
+    }
 
     #migtext, #battext{
         /* margin-left: 20em; */
@@ -679,10 +721,16 @@ nav > ul > li > a:hover{
         margin-left: 15%;
     }
 
+    #ombat{
+        margin-top: 4%;
+        margin-bottom: 3em;
+    }
+
 /*kontakt-sida*/
 
     #kontaktdiv{
         background-position: center calc(50% - 90px);
+        background-size: cover;
     }
 
     #kontaktsida{
@@ -691,4 +739,31 @@ nav > ul > li > a:hover{
         margin-top: -1.7em;
     }
 
+}
+
+@media screen and (max-width: 1245px) { 
+    
+    #migtext, #battext{
+        /* margin-left: 20em; */
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 930px) and (min-width: 768px) { 
+    
+    .tjanstruta{
+        width: 45vw;
+        margin: 7px;
+        margin-top: 3em;
+    }
+    .tjanstbild{
+        margin-top: -2.5em;
+        height: 17em;
+        width: 17em;
+    }
+    .tjanstrutor{
+        width: 95vw;
+        margin: auto;
+        margin-top: -5em;
+    }
 }
